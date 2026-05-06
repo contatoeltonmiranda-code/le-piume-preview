@@ -1,364 +1,704 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Le Piume - Strumenti per artisti del gesto</title>
-<meta name="description" content="Pennelli da trucco professionali. Curatela autoriale, precisione editoriale, ritualita del gesto. Strumenti pensati come estensione della mano." />
-<meta name="theme-color" content="#1A1A1A" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Le Piume - Strumenti per artisti del gesto" />
-<meta property="og:description" content="Pennelli pensati come estensione della mano. Leggeri come piume. Precisi come intenzione." />
-<meta property="og:image" content="og-placeholder.svg" />
-<meta property="og:locale" content="it_IT" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Le Piume - Strumenti per artisti del gesto" />
-<meta name="twitter:description" content="Pennelli pensati come estensione della mano." />
-<meta name="twitter:image" content="og-placeholder.svg" />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Piume - Copy do site (revisao)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,-apple-system,sans-serif;background:#FAFAF8;color:#1A1A1A;line-height:1.7;font-size:16px;padding:60px 24px;-webkit-font-smoothing:antialiased}
+.doc{max-width:820px;margin:0 auto}
+.head{border-bottom:1px solid #E5E2DC;padding-bottom:32px;margin-bottom:40px}
+.head__brand{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#A89070;margin-bottom:12px}
+.head__title{font-size:30px;font-weight:600;letter-spacing:-.5px;margin-bottom:14px}
+.head__meta{font-size:13px;color:#6B655B;display:flex;gap:24px;flex-wrap:wrap;margin-top:16px}
+.head__meta span strong{color:#1A1A1A}
+.tabs{display:inline-flex;background:#fff;border:1px solid #E5E2DC;border-radius:50px;padding:4px;margin-bottom:36px}
+.tab{padding:8px 18px;font-size:12px;letter-spacing:1px;text-transform:uppercase;background:transparent;border:0;cursor:pointer;color:#6B655B;font-family:inherit;border-radius:50px;transition:all .2s}
+.tab.active{background:#1A1A1A;color:#fff}
+.content{background:#fff;border:1px solid #E5E2DC;padding:48px;border-radius:6px}
+.content h1{display:none}
+.content h2{font-size:24px;font-weight:600;margin:48px 0 16px;padding-top:32px;border-top:1px solid #F0EDE7;letter-spacing:-.3px}
+.content h2:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.content h3{font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#A89070;margin:32px 0 12px}
+.content p{margin-bottom:14px;font-size:16px;color:#1A1A1A}
+.content ul{margin:16px 0;padding-left:24px}
+.content li{margin-bottom:6px;font-size:15px;color:#3A3A3A}
+.content hr{border:0;border-top:1px solid #F0EDE7;margin:32px 0}
+.content blockquote{border-left:3px solid #A89070;padding:8px 16px;margin:20px 0;font-style:italic;color:#6B655B;background:#FBF9F4;border-radius:0 4px 4px 0}
+.content strong{font-weight:600}
+.content code{background:#F4F1EA;padding:2px 8px;border-radius:3px;font-family:JetBrains Mono,monospace;font-size:13px;color:#8C6F00}
+.lang-it{display:block}
+.lang-pt{display:none}
+body.show-pt .lang-it{display:none}
+body.show-pt .lang-pt{display:block}
+.legend{margin-top:32px;background:#fff;border:1px solid #E5E2DC;padding:20px 24px;border-radius:6px;font-size:13px;color:#6B655B}
+.legend strong{color:#1A1A1A}
+@media(max-width:640px){body{padding:32px 16px}.content{padding:24px}.head__title{font-size:24px}}
+</style>
 </head>
 <body>
-<a class="skip-link" href="#inizio">Vai al contenuto</a>
-<header class="nav" id="nav">
-  <div class="nav__inner">
-    <a href="#inizio" class="nav__brand" aria-label="Le Piume - home">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 32 40" width="14" height="18" fill="none" stroke="currentColor" stroke-width="1.2">
-          <path d="M16 38 V6 M16 6 C12 10, 8 14, 8 22 C8 26, 12 28, 16 28 M16 6 C20 10, 24 14, 24 22 C24 26, 20 28, 16 28" />
-        </svg>
-      </span>
-      <span class="brand__name">Le Piume</span>
-    </a>
-    <nav class="nav__menu" aria-label="Navigazione principale">
-      <a href="#inizio" class="nav__link">Inizio</a>
-      <a href="#storia" class="nav__link">Storia</a>
-      <a href="#pennelli" class="nav__link">Pennelli</a>
-      <a href="#contatti" class="nav__link">Contatti</a>
-    </nav>
-    <button class="nav__toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-mobile">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav__mobile" id="nav-mobile" hidden>
-    <a href="#inizio" class="nav__link">Inizio</a>
-    <a href="#storia" class="nav__link">Storia</a>
-    <a href="#pennelli" class="nav__link">Pennelli</a>
-    <a href="#contatti" class="nav__link">Contatti</a>
-  </div>
-</header>
-<main>
-<section class="page page--home" id="inizio">
-  <div class="hero">
-    <div class="hero__text">
-      <p class="eyebrow reveal">Le Piume</p>
-      <h1 class="hero__title reveal">Strumenti per artisti<br/>del gesto.</h1>
-      <p class="hero__sub reveal">Pennelli pensati come estensione della mano.<br/>Leggeri come piume. Precisi come intenzione.</p>
-      <div class="hero__cta reveal">
-        <a href="#pennelli" class="link">Esplora la collezione &rarr;</a>
-        <a href="#storia" class="link link--ghost">Scopri la storia</a>
-      </div>
+<div class="doc">
+<header class="head"><div class="head__brand">Le Piume - Cliente 08</div><h1 class="head__title">Copy do site (revisao)</h1><div class="head__meta"><span><strong>Cliente:</strong> Julio De Oliveira</span><span><strong>Mercado:</strong> Italia</span><span><strong>Idioma oficial:</strong> Italiano</span><span><strong>Estrutura:</strong> 4 paginas</span></div></header><div class="tabs"><button class="tab active" data-lang="it">Italiano (oficial)</button><button class="tab" data-lang="pt">PT-BR (referencia)</button></div><div class="content"><div class="lang-it"><h1>Le Piume — Copy Italiano (sito istituzionale)</h1>
+
+<p><strong>Cliente:</strong> Julio De Oliveira</p>
+<p><strong>Mercato:</strong> Italia</p>
+<p><strong>Data:</strong> 2026-05-05</p>
+<p><strong>Lingua:</strong> Italiano (versione ufficiale)</p>
+
+<blockquote>Nota: trechi marcati <code>[REVISAR ITALIANO NATIVO]</code> indicam revisao por falante nativo prima della pubblicazione.</blockquote>
+
+<hr>
+
+<h2>PAGINA 1 — INIZIO (Home)</h2>
+
+<h3>Hero</h3>
+
+<p><strong>Sopratitolo:</strong> Le Piume</p>
+
+<p><strong>Titolo:</strong> Strumenti per artisti del gesto.</p>
+
+<p><strong>Sottotitolo:</strong> Pennelli pensati come estensione della mano. Leggeri come piume. Precisi come intenzione.</p>
+
+<p><strong>CTA primario:</strong> Esplora la collezione →</p>
+<p><strong>CTA secondario:</strong> Scopri la storia</p>
+
+<hr>
+
+<h3>Manifesto</h3>
+
+<p>Crediamo che la bellezza non sia correzione, ma creazione.</p>
+
+<p>Le Piume nasce per trasformare il tocco in linguaggio. Ogni pennello, in un'estensione della mano dell'artista.</p>
+
+<p>Non una collezione di strumenti.</p>
+<p>Un vocabolario per chi crea.</p>
+
+<hr>
+
+<h3>Tre pilastri</h3>
+
+<p><strong>01 — Precisione</strong></p>
+<p>Setole tecniche, densita calibrata, proporzioni studiate. Nessun gesto sprecato. Nessuna correzione necessaria.</p>
+
+<p><strong>02 — Rituale</strong></p>
+<p>Il trucco smette di essere routine. Diventa ascolto, attenzione, presenza. Un momento, non un compito.</p>
+
+<p><strong>03 — Curatela</strong></p>
+<p>Niente kit ridondanti. Ogni pennello ha una ragione di esistere. Una collezione essenziale, autoriale.</p>
+
+<hr>
+
+<h3>In evidenza — i pennelli</h3>
+
+<p><strong>Aria</strong> — pennello cipria</p>
+<p>Per stendere la polvere come un velo d'aria. Senza accumulo, senza linee.</p>
+
+<p><strong>Velo</strong> — pennello fondotinta</p>
+<p>Costruisce la base con coerenza. Pelle uniforme, finitura lavorata, mai pesante.</p>
+
+<p><strong>Soffio</strong> — pennello ombretto</p>
+<p>Sfumature che si dissolvono in luce. Controllo morbido, transizioni invisibili.</p>
+
+<p><code>[EXEMPLO — confirmar nomes e tipos com cliente]</code></p>
+
+<p><strong>CTA:</strong> Vedi tutti i pennelli →</p>
+
+<hr>
+
+<h3>Chiusura</h3>
+
+<p>Le Piume non e solo un nome.</p>
+<p>E un modo di lavorare.</p>
+
+<p><strong>CTA finale:</strong> Inizia il rituale →</p>
+
+<hr>
+
+<h2>PAGINA 2 — LA STORIA</h2>
+
+<h3>Hero</h3>
+
+<p><strong>Sopratitolo:</strong> La storia</p>
+
+<p><strong>Titolo:</strong> Nato dall'osservazione di un gesto.</p>
+
+<p><strong>Sottotitolo:</strong> L'istante quasi invisibile in cui un pennello tocca la pelle e trasforma la materia in luce, colore, espressione.</p>
+
+<hr>
+
+<h3>Origine</h3>
+
+<p>Mentre la maggior parte vedeva i pennelli come accessori, abbiamo iniziato a vederli come strumenti.</p>
+
+<p>Leggeri come piume.</p>
+<p>Precisi come l'estensione della mano.</p>
+
+<p>Le Piume — "le piume" — porta in se questa dualita: leggerezza e controllo. Morbidezza e prestazione. Poesia e precisione.</p>
+
+<p>Una collezione concepita per onorare il rituale del trucco. Il movimento, la texture, l'intenzione dietro ogni applicazione.</p>
+
+<hr>
+
+<h3>Filosofia di design</h3>
+
+<p>Ogni forma e nata da una domanda.</p>
+<p>Ogni densita di setole, da uno scopo.</p>
+<p>Ogni proporzione, da un gesto reale.</p>
+
+<p>Non disegniamo pennelli per riempire una collezione.</p>
+<p>Disegniamo strumenti per traducere il gesto in arte.</p>
+
+<hr>
+
+<h3>Atelier</h3>
+
+<p>Ispirati alla disciplina degli atelier artistici e alla delicatezza delle penne, lavoriamo con cura artigianale.</p>
+
+<p>Materiali selezionati. Cuciture invisibili. Proporzioni equilibrate.</p>
+
+<p>Niente che non serva.</p>
+<p>Niente che manchi.</p>
+
+<hr>
+
+<h3>Chiusura</h3>
+
+<p>Le Piume e poesia che funziona.</p>
+<p>Strumento che dura.</p>
+<p>Gesto che resta.</p>
+
+<p><strong>CTA:</strong> Conosci la collezione →</p>
+
+<hr>
+
+<h2>PAGINA 3 — I PENNELLI</h2>
+
+<h3>Hero</h3>
+
+<p><strong>Sopratitolo:</strong> La collezione</p>
+
+<p><strong>Titolo:</strong> Pennelli con nome.</p>
+
+<p><strong>Sottotitolo:</strong> Quattro strumenti pensati per i quattro gesti essenziali. Ognuno con la sua intenzione, la sua texture, il suo carattere.</p>
+
+<hr>
+
+<h3>Intro</h3>
+
+<p>Niente kit pieni di pennelli che non userai.</p>
+<p>Niente nomi anonimi e numeri senza significato.</p>
+
+<p>Le Piume e curatela.</p>
+<p>Ogni pennello ha una ragione di esistere — e un nome che la racconta.</p>
+
+<p><code>[EXEMPLO — nomes a confirmar com cliente]</code></p>
+
+<hr>
+
+<h3>01 — Aria</h3>
+
+<p><strong>Tipo:</strong> Pennello cipria</p>
+
+<p>Setole leggere, ampie, distribuite per accogliere la polvere come un respiro.</p>
+
+<p>Stende, non deposita.</p>
+<p>Fissa, non appesantisce.</p>
+
+<p><strong>Per quando:</strong> finitura, controllo della lucidita, fissaggio del trucco.</p>
+
+<p><code>[EXEMPLO — confirmar com cliente]</code></p>
+
+<hr>
+
+<h3>02 — Velo</h3>
+
+<p><strong>Tipo:</strong> Pennello fondotinta</p>
+
+<p>Densita media, forma piatta-ovale, presa stabile.</p>
+
+<p>Costruisce strati senza traccia. La pelle resta pelle — solo piu uniforme.</p>
+
+<p><strong>Per quando:</strong> base, copertura modulabile, finitura naturale.</p>
+
+<p><code>[EXEMPLO — confirmar com cliente]</code></p>
+
+<hr>
+
+<h3>03 — Soffio</h3>
+
+<p><strong>Tipo:</strong> Pennello ombretto</p>
+
+<p>Setole corte, morbide, dense al centro per intensita controllata.</p>
+
+<p>Lavora nella piega come un'eco. Sfuma senza disperdere.</p>
+
+<p><strong>Per quando:</strong> ombretto, sfumature, transizioni di luce sull'occhio.</p>
+
+<p><code>[EXEMPLO — confirmar com cliente]</code></p>
+
+<hr>
+
+<h3>04 — Carezza</h3>
+
+<p><strong>Tipo:</strong> Pennello blush</p>
+
+<p>Setole lunghe, leggere, a cupola.</p>
+
+<p>Posa il colore con un gesto solo. Sfuma da se. Lascia un velo, non una linea.</p>
+
+<p><strong>Per quando:</strong> blush, illuminante, contouring leggero.</p>
+
+<p><code>[EXEMPLO — confirmar com cliente]</code></p>
+
+<hr>
+
+<h3>Chiusura</h3>
+
+<p>Quattro pennelli.</p>
+<p>Quattro nomi.</p>
+<p>Quattro modi di trasformare il gesto in arte.</p>
+
+<p><strong>CTA:</strong> Contattaci per scoprire la collezione →</p>
+
+<hr>
+
+<h2>PAGINA 4 — CONTATTI</h2>
+
+<h3>Hero</h3>
+
+<p><strong>Sopratitolo:</strong> Contatti</p>
+
+<p><strong>Titolo:</strong> Parliamone.</p>
+
+<p><strong>Sottotitolo:</strong> Per ordini, collaborazioni, o semplicemente per condividere il tuo gesto. Siamo qui.</p>
+
+<hr>
+
+<h3>Modi di contatto</h3>
+
+<p><strong>Telefono / WhatsApp</strong></p>
+<p>+39 388 7346075</p>
+
+<p><strong>Email</strong></p>
+<p>[A CONFIRMAR — email da contato com cliente]</p>
+
+<p><strong>Instagram</strong></p>
+<p>@yanadubina_brushes</p>
+<p><code>[A CONFIRMAR — confirmar handle ufficiale Le Piume com cliente]</code></p>
+
+<hr>
+
+<h3>Modulo</h3>
+
+<p><strong>Titolo del modulo:</strong> Scrivici</p>
+
+<p><strong>Campo 1 — Nome</strong></p>
+<p>Label: Nome</p>
+<p>Placeholder: Il tuo nome</p>
+
+<p><strong>Campo 2 — Email</strong></p>
+<p>Label: Email</p>
+<p>Placeholder: La tua email</p>
+
+<p><strong>Campo 3 — Messaggio</strong></p>
+<p>Label: Messaggio</p>
+<p>Placeholder: Raccontaci cosa cerchi.</p>
+
+<p><strong>Bottone:</strong> Invia →</p>
+
+<hr>
+
+<h3>Microcopy post-invio</h3>
+
+<p><strong>Titolo:</strong> Grazie.</p>
+
+<p><strong>Testo:</strong> Il tuo messaggio e arrivato. Ti risponderemo entro 24 ore lavorative.</p>
+
+<p><code>[A CONFIRMAR — prazo de resposta com cliente]</code></p>
+
+<hr>
+
+<h3>Chiusura</h3>
+
+<p>Le Piume — strumenti per artisti del gesto.</p>
+</div><div class="lang-pt"><h1>Le Piume — Copy PT-BR (REFERENCIA INTERNA)</h1>
+
+<blockquote><strong>VERSAO REFERENCIA — NAO PUBLICAR.</strong></blockquote>
+<blockquote>Apenas para revisao do conteudo pelo Elton.</blockquote>
+<blockquote>A copy oficial esta em <code>copy-italiano.md</code>.</blockquote>
+
+<p><strong>Cliente:</strong> Julio De Oliveira</p>
+<p><strong>Mercado:</strong> Italia</p>
+<p><strong>Data:</strong> 2026-05-05</p>
+
+<hr>
+
+<h2>PAGINA 1 — INICIO (Home)</h2>
+
+<h3>Hero</h3>
+
+<p><strong>Pre-titulo:</strong> Le Piume</p>
+
+<p><strong>Titulo:</strong> Instrumentos para artistas do gesto.</p>
+
+<p><strong>Subtitulo:</strong> Pinceis pensados como extensao da mao. Leves como plumas. Precisos como intencao.</p>
+
+<p><strong>CTA primario:</strong> Explore a colecao →</p>
+<p><strong>CTA secundario:</strong> Conheca a historia</p>
+
+<hr>
+
+<h3>Manifesto</h3>
+
+<p>Acreditamos que beleza nao e correcao, mas criacao.</p>
+
+<p>Le Piume nasce para transformar o toque em linguagem. Cada pincel, em uma extensao da mao do artista.</p>
+
+<p>Nao uma colecao de instrumentos.</p>
+<p>Um vocabulario para quem cria.</p>
+
+<hr>
+
+<h3>Tres pilares</h3>
+
+<p><strong>01 — Precisao</strong></p>
+<p>Cerdas tecnicas, densidade calibrada, proporcoes estudadas. Nenhum gesto desperdicado. Nenhuma correcao necessaria.</p>
+
+<p><strong>02 — Ritual</strong></p>
+<p>A maquiagem deixa de ser rotina. Vira escuta, atencao, presenca. Um momento, nao uma tarefa.</p>
+
+<p><strong>03 — Curadoria</strong></p>
+<p>Sem kits redundantes. Cada pincel tem razao de existir. Uma colecao essencial, autoral.</p>
+
+<hr>
+
+<h3>Em destaque — os pinceis</h3>
+
+<p><strong>Aria</strong> — pincel po</p>
+<p>Para depositar o po como um veu de ar. Sem acumulo, sem linhas.</p>
+
+<p><strong>Velo</strong> — pincel base</p>
+<p>Constroi a base com coerencia. Pele uniforme, acabamento trabalhado, nunca pesada.</p>
+
+<p><strong>Soffio</strong> — pincel sombra</p>
+<p>Esfumados que se dissolvem em luz. Controle suave, transicoes invisiveis.</p>
+
+<p><code>[EXEMPLO — confirmar nomes e tipos com cliente]</code></p>
+
+<p><strong>CTA:</strong> Veja todos os pinceis →</p>
+
+<hr>
+
+<h3>Fechamento</h3>
+
+<p>Le Piume nao e so um nome.</p>
+<p>E um modo de trabalhar.</p>
+
+<p><strong>CTA final:</strong> Comece o ritual →</p>
+
+<hr>
+
+<h2>PAGINA 2 — A HISTORIA</h2>
+
+<h3>Hero</h3>
+
+<p><strong>Pre-titulo:</strong> A historia</p>
+
+<p><strong>Titulo:</strong> Nascida da observacao de um gesto.</p>
+
+<p><strong>Subtitulo:</strong> O instante quase invisivel em que um pincel toca a pele e transforma materia em luz, cor, expressao.</p>
+
+<hr>
+
+<h3>Origem</h3>
+
+<p>Enquanto a maioria via os pinceis como acessorios, comecamos a ve-los como instrumentos.</p>
+
+<p>Leves como plumas.</p>
+<p>Precisos como extensao da mao.</p>
+
+<p>Le Piume — "as plumas" — carrega essa dualidade: leveza e controle. Suavidade e performance. Poesia e precisao.</p>
+
+<p>Uma colecao concebida para honrar o ritual da maquiagem. O movimento, a textura, a intencao por tras de cada aplicacao.</p>
+
+<hr>
+
+<h3>Filosofia de design</h3>
+
+<p>Cada forma nasceu de uma pergunta.</p>
+<p>Cada densidade de cerdas, de um proposito.</p>
+<p>Cada proporcao, de um gesto real.</p>
+
+<p>Nao desenhamos pinceis para preencher uma colecao.</p>
+<p>Desenhamos instrumentos para traduzir gesto em arte.</p>
+
+<hr>
+
+<h3>Atelie</h3>
+
+<p>Inspirados na disciplina dos atelies artisticos e na delicadeza das penas, trabalhamos com cuidado artesanal.</p>
+
+<p>Materiais selecionados. Costuras invisiveis. Proporcoes equilibradas.</p>
+
+<p>Nada que nao sirva.</p>
+<p>Nada que falte.</p>
+
+<hr>
+
+<h3>Fechamento</h3>
+
+<p>Le Piume e poesia que funciona.</p>
+<p>Instrumento que dura.</p>
+<p>Gesto que permanece.</p>
+
+<p><strong>CTA:</strong> Conheca a colecao →</p>
+
+<hr>
+
+<h2>PAGINA 3 — OS PINCEIS</h2>
+
+<h3>Hero</h3>
+
+<p><strong>Pre-titulo:</strong> A colecao</p>
+
+<p><strong>Titulo:</strong> Pinceis com nome.</p>
+
+<p><strong>Subtitulo:</strong> Quatro instrumentos pensados para os quatro gestos essenciais. Cada um com sua intencao, sua textura, seu carater.</p>
+
+<hr>
+
+<h3>Intro</h3>
+
+<p>Sem kits cheios de pinceis que voce nao vai usar.</p>
+<p>Sem nomes anonimos e numeros sem significado.</p>
+
+<p>Le Piume e curadoria.</p>
+<p>Cada pincel tem razao de existir — e um nome que a conta.</p>
+
+<p><code>[EXEMPLO — nomes a confirmar com cliente]</code></p>
+
+<hr>
+
+<h3>01 — Aria</h3>
+
+<p><strong>Tipo:</strong> Pincel po</p>
+
+<p>Cerdas leves, amplas, distribuidas para acolher o po como um respiro.</p>
+
+<p>Estende, nao deposita.</p>
+<p>Fixa, nao pesa.</p>
+
+<p><strong>Para quando:</strong> acabamento, controle de oleosidade, fixacao da maquiagem.</p>
+
+<hr>
+
+<h3>02 — Velo</h3>
+
+<p><strong>Tipo:</strong> Pincel base</p>
+
+<p>Densidade media, forma chata-ovalada, pega estavel.</p>
+
+<p>Constroi camadas sem deixar marca. A pele continua pele — so mais uniforme.</p>
+
+<p><strong>Para quando:</strong> base, cobertura modulavel, acabamento natural.</p>
+
+<hr>
+
+<h3>03 — Soffio</h3>
+
+<p><strong>Tipo:</strong> Pincel sombra</p>
+
+<p>Cerdas curtas, macias, densas no centro para intensidade controlada.</p>
+
+<p>Trabalha na dobra como um eco. Esfuma sem dispersar.</p>
+
+<p><strong>Para quando:</strong> sombra, esfumados, transicoes de luz no olho.</p>
+
+<hr>
+
+<h3>04 — Carezza</h3>
+
+<p><strong>Tipo:</strong> Pincel blush</p>
+
+<p>Cerdas longas, leves, em cupula.</p>
+
+<p>Pousa a cor com um gesto so. Esfuma sozinho. Deixa um veu, nao uma linha.</p>
+
+<p><strong>Para quando:</strong> blush, iluminador, contorno leve.</p>
+
+<hr>
+
+<h3>Fechamento</h3>
+
+<p>Quatro pinceis.</p>
+<p>Quatro nomes.</p>
+<p>Quatro modos de transformar o gesto em arte.</p>
+
+<p><strong>CTA:</strong> Entre em contato para conhecer a colecao →</p>
+
+<hr>
+
+<h2>PAGINA 4 — CONTATO</h2>
+
+<h3>Hero</h3>
+
+<p><strong>Pre-titulo:</strong> Contato</p>
+
+<p><strong>Titulo:</strong> Vamos conversar.</p>
+
+<p><strong>Subtitulo:</strong> Para pedidos, parcerias, ou apenas para compartilhar seu gesto. Estamos aqui.</p>
+
+<hr>
+
+<h3>Formas de contato</h3>
+
+<p><strong>Telefone / WhatsApp</strong></p>
+<p>+39 388 7346075</p>
+
+<p><strong>Email</strong></p>
+<p>[A CONFIRMAR]</p>
+
+<p><strong>Instagram</strong></p>
+<p>@yanadubina_brushes <code>[A CONFIRMAR — handle oficial Le Piume]</code></p>
+
+<hr>
+
+<h3>Formulario</h3>
+
+<p><strong>Titulo:</strong> Escreva pra gente</p>
+
+<p><strong>Campo 1 — Nome</strong></p>
+<p>Label: Nome</p>
+<p>Placeholder: Seu nome</p>
+
+<p><strong>Campo 2 — Email</strong></p>
+<p>Label: Email</p>
+<p>Placeholder: Seu email</p>
+
+<p><strong>Campo 3 — Mensagem</strong></p>
+<p>Label: Mensagem</p>
+<p>Placeholder: Conte o que procura.</p>
+
+<p><strong>Botao:</strong> Enviar →</p>
+
+<hr>
+
+<h3>Microcopy pos-envio</h3>
+
+<p><strong>Titulo:</strong> Obrigado.</p>
+
+<p><strong>Texto:</strong> Sua mensagem chegou. Respondemos em ate 24h uteis.</p>
+
+<p><code>[A CONFIRMAR — prazo de resposta]</code></p>
+
+<hr>
+
+<h3>Fechamento</h3>
+
+<p>Le Piume — instrumentos para artistas do gesto.</p>
+</div></div><div class="legend"><strong>Legenda:</strong> trechos com <code>[A CONFIRMAR]</code> ou <code>[EXEMPLO]</code> precisam de validacao com cliente. Tom: editorial italiano premium (referencias mentais: Aesop, Byredo, Diptyque). Estrutura: 4 paginas (NAO e LP) - site institucional. Recomenda-se revisao por nativo italiano antes de publicar.</div></div>
+<script>const t=document.querySelectorAll('.tab');t.forEach(x=>x.addEventListener('click',()=>{t.forEach(y=>y.classList.remove('active'));x.classList.add('active');document.body.classList.toggle('show-pt',x.dataset.lang==='pt');}));</script>
+</body>
+</html>
+<section class="page-card" id="pagina-04">
+  <div class="page-head">
+    <span class="page-num">04</span>
+    <div>
+      <div class="page-name lang-it">Contatti</div>
+      <div class="page-name lang-pt">Contato</div>
+      <h2 class="lang-it">Parliamone.</h2>
+      <h2 class="lang-pt">Vamos conversar.</h2>
     </div>
-    <div class="hero__visual reveal" aria-hidden="true">
-      <div class="hero__plate">
-        <svg viewBox="0 0 200 320" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <linearGradient id="brushG" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stop-color="#C9B79C" />
-              <stop offset="100%" stop-color="#8C7556" />
-            </linearGradient>
-          </defs>
-          <rect x="92" y="120" width="16" height="170" rx="2" fill="#1A1A1A" />
-          <rect x="90" y="100" width="20" height="24" fill="#A89070" />
-          <path d="M88 100 Q100 30 112 100 Z" fill="url(#brushG)" opacity="0.95" />
-          <path d="M100 30 V100" stroke="#6B5A40" stroke-width="0.6" opacity="0.6" />
-        </svg>
-      </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Hero</div>
+    <div class="lang-it">
+      <div class="kv"><span class="k">Sopratitolo</span><span class="v">Contatti</span></div>
+      <div class="kv"><span class="k">Titolo</span><span class="v">Parliamone.</span></div>
+      <div class="kv"><span class="k">Sottotitolo</span><span class="v">Per ordini, collaborazioni, o semplicemente per condividere il tuo gesto. Siamo qui.</span></div>
+    </div>
+    <div class="lang-pt">
+      <div class="kv"><span class="k">Pre-titulo</span><span class="v">Contato</span></div>
+      <div class="kv"><span class="k">Titulo</span><span class="v">Vamos conversar.</span></div>
+      <div class="kv"><span class="k">Subtitulo</span><span class="v">Para pedidos, parcerias, ou apenas para compartilhar seu gesto. Estamos aqui.</span></div>
     </div>
   </div>
-  <div class="container">
-    <div class="divider" aria-hidden="true"></div>
-    <section class="manifesto reveal" aria-labelledby="manifesto-h">
-      <p class="eyebrow">Manifesto</p>
-      <h2 id="manifesto-h" class="display">Crediamo che la bellezza<br/>non sia correzione, ma creazione.</h2>
-      <p class="lede">Le Piume nasce per trasformare il tocco in linguaggio. Ogni pennello, in un&rsquo;estensione della mano dell&rsquo;artista.</p>
-      <p class="lede lede--quiet">Non una collezione di strumenti.<br/>Un vocabolario per chi crea.</p>
-    </section>
-    <div class="divider" aria-hidden="true"></div>
-    <section class="pillars" aria-labelledby="pillars-h">
-      <p class="eyebrow reveal">Tre pilastri</p>
-      <h2 id="pillars-h" class="display reveal">Precisione. Rituale. Curatela.</h2>
-      <ol class="pillars__grid">
-        <li class="pillar reveal">
-          <span class="pillar__num">01</span>
-          <h3 class="pillar__title">Precisione</h3>
-          <p>Setole tecniche, densita calibrata, proporzioni studiate. Nessun gesto sprecato. Nessuna correzione necessaria.</p>
-        </li>
-        <li class="pillar reveal">
-          <span class="pillar__num">02</span>
-          <h3 class="pillar__title">Rituale</h3>
-          <p>Il trucco smette di essere routine. Diventa ascolto, attenzione, presenza. Un momento, non un compito.</p>
-        </li>
-        <li class="pillar reveal">
-          <span class="pillar__num">03</span>
-          <h3 class="pillar__title">Curatela</h3>
-          <p>Niente kit ridondanti. Ogni pennello ha una ragione di esistere. Una collezione essenziale, autoriale.</p>
-        </li>
-      </ol>
-    </section>
-    <div class="divider" aria-hidden="true"></div>
-    <section class="featured" aria-labelledby="featured-h">
-      <p class="eyebrow reveal">In evidenza</p>
-      <h2 id="featured-h" class="display reveal">I pennelli.</h2>
-      <div class="featured__grid">
-        <article class="card reveal">
-          <div class="card__visual" aria-hidden="true">
-            <svg viewBox="0 0 80 200" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-              <rect x="36" y="80" width="8" height="105" rx="1" fill="#1A1A1A" />
-              <rect x="34" y="65" width="12" height="18" fill="#A89070" />
-              <ellipse cx="40" cy="40" rx="22" ry="32" fill="#C9B79C" opacity="0.9" />
-            </svg>
-          </div>
-          <h3 class="card__name">Aria <span class="card__dash">&mdash;</span> <span class="card__type">pennello cipria</span></h3>
-          <p>Per stendere la polvere come un velo d&rsquo;aria. Senza accumulo, senza linee.</p>
-        </article>
-        <article class="card reveal">
-          <div class="card__visual" aria-hidden="true">
-            <svg viewBox="0 0 80 200" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-              <rect x="36" y="85" width="8" height="100" rx="1" fill="#1A1A1A" />
-              <rect x="34" y="70" width="12" height="18" fill="#A89070" />
-              <path d="M22 70 Q40 18 58 70 Z" fill="#B8A488" />
-            </svg>
-          </div>
-          <h3 class="card__name">Velo <span class="card__dash">&mdash;</span> <span class="card__type">pennello fondotinta</span></h3>
-          <p>Costruisce la base con coerenza. Pelle uniforme, finitura lavorata, mai pesante.</p>
-        </article>
-        <article class="card reveal">
-          <div class="card__visual" aria-hidden="true">
-            <svg viewBox="0 0 80 200" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-              <rect x="36" y="100" width="8" height="85" rx="1" fill="#1A1A1A" />
-              <rect x="34" y="86" width="12" height="16" fill="#A89070" />
-              <ellipse cx="40" cy="76" rx="14" ry="14" fill="#9C8462" />
-            </svg>
-          </div>
-          <h3 class="card__name">Soffio <span class="card__dash">&mdash;</span> <span class="card__type">pennello ombretto</span></h3>
-          <p>Sfumature che si dissolvono in luce. Controllo morbido, transizioni invisibili.</p>
-        </article>
-      </div>
-      <p class="note reveal">[EXEMPLO - confirmar nomes e tipos com cliente]</p>
-      <p class="cta-line reveal"><a href="#pennelli" class="link">Vedi tutti i pennelli &rarr;</a></p>
-    </section>
-    <div class="divider" aria-hidden="true"></div>
-    <section class="closing reveal">
-      <h2 class="display display--center">Le Piume non e solo un nome.<br/>E un modo di lavorare.</h2>
-      <p class="cta-line"><a href="#contatti" class="link">Inizia il rituale &rarr;</a></p>
-    </section>
-  </div>
-</section>
-<section class="page" id="storia">
-  <div class="container">
-    <header class="page__head reveal">
-      <p class="eyebrow">La storia</p>
-      <h2 class="display">Nato dall&rsquo;osservazione<br/>di un gesto.</h2>
-      <p class="lede">L&rsquo;istante quasi invisibile in cui un pennello tocca la pelle e trasforma la materia in luce, colore, espressione.</p>
-    </header>
-    <div class="divider" aria-hidden="true"></div>
-    <article class="prose reveal" aria-labelledby="origine-h">
-      <p class="eyebrow">Origine</p>
-      <h3 id="origine-h" class="display display--sm">Strumenti, non accessori.</h3>
-      <p>Mentre la maggior parte vedeva i pennelli come accessori, abbiamo iniziato a vederli come strumenti.</p>
-      <p class="prose__quote">Leggeri come piume.<br/>Precisi come l&rsquo;estensione della mano.</p>
-      <p>Le Piume &mdash; &laquo;le piume&raquo; &mdash; porta in se questa dualita: leggerezza e controllo. Morbidezza e prestazione. Poesia e precisione.</p>
-      <p>Una collezione concepita per onorare il rituale del trucco. Il movimento, la texture, l&rsquo;intenzione dietro ogni applicazione.</p>
-    </article>
-    <div class="divider" aria-hidden="true"></div>
-    <article class="prose reveal" aria-labelledby="design-h">
-      <p class="eyebrow">Filosofia di design</p>
-      <h3 id="design-h" class="display display--sm">Ogni forma e nata da una domanda.</h3>
-      <p>Ogni densita di setole, da uno scopo.<br/>Ogni proporzione, da un gesto reale.</p>
-      <p>Non disegniamo pennelli per riempire una collezione.<br/>Disegniamo strumenti per tradurre il gesto in arte.</p>
-    </article>
-    <div class="divider" aria-hidden="true"></div>
-    <article class="prose reveal" aria-labelledby="atelier-h">
-      <p class="eyebrow">Atelier</p>
-      <h3 id="atelier-h" class="display display--sm">Disciplina e delicatezza.</h3>
-      <p>Ispirati alla disciplina degli atelier artistici e alla delicatezza delle penne, lavoriamo con cura artigianale.</p>
-      <p>Materiali selezionati. Cuciture invisibili. Proporzioni equilibrate.</p>
-      <p class="prose__quote">Niente che non serva.<br/>Niente che manchi.</p>
-    </article>
-    <div class="divider" aria-hidden="true"></div>
-    <section class="closing reveal">
-      <h2 class="display display--center">Le Piume e poesia che funziona.<br/>Strumento che dura.<br/>Gesto che resta.</h2>
-      <p class="cta-line"><a href="#pennelli" class="link">Conosci la collezione &rarr;</a></p>
-    </section>
-  </div>
-</section>
-<section class="page" id="pennelli">
-  <div class="container">
-    <header class="page__head reveal">
-      <p class="eyebrow">La collezione</p>
-      <h2 class="display">Pennelli con nome.</h2>
-      <p class="lede">Quattro strumenti pensati per i quattro gesti essenziali. Ognuno con la sua intenzione, la sua texture, il suo carattere.</p>
-    </header>
-    <div class="divider" aria-hidden="true"></div>
-    <section class="prose reveal">
-      <p>Niente kit pieni di pennelli che non userai.<br/>Niente nomi anonimi e numeri senza significato.</p>
-      <p class="prose__quote">Le Piume e curatela.<br/>Ogni pennello ha una ragione di esistere &mdash; e un nome che la racconta.</p>
-      <p class="note">[EXEMPLO - nomes a confirmar com cliente]</p>
-    </section>
-    <div class="divider" aria-hidden="true"></div>
-    <ol class="brushes">
-      <li class="brush reveal">
-        <div class="brush__num">01</div>
-        <div class="brush__visual" aria-hidden="true">
-          <svg viewBox="0 0 100 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-            <rect x="46" y="100" width="8" height="125" rx="1" fill="#1A1A1A" />
-            <rect x="44" y="82" width="12" height="20" fill="#A89070" />
-            <ellipse cx="50" cy="50" rx="28" ry="40" fill="#C9B79C" opacity="0.92" />
-          </svg>
-        </div>
-        <div class="brush__body">
-          <h3 class="brush__name">Aria</h3>
-          <p class="brush__type">Pennello cipria</p>
-          <p>Setole leggere, ampie, distribuite per accogliere la polvere come un respiro.</p>
-          <p class="prose__quote">Stende, non deposita.<br/>Fissa, non appesantisce.</p>
-          <p><strong>Per quando:</strong> finitura, controllo della lucidita, fissaggio del trucco.</p>
-          <p class="note">[EXEMPLO - confirmar com cliente]</p>
-        </div>
-      </li>
-      <li class="brush reveal">
-        <div class="brush__num">02</div>
-        <div class="brush__visual" aria-hidden="true">
-          <svg viewBox="0 0 100 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-            <rect x="46" y="105" width="8" height="120" rx="1" fill="#1A1A1A" />
-            <rect x="44" y="88" width="12" height="20" fill="#A89070" />
-            <path d="M26 88 Q50 22 74 88 Z" fill="#B8A488" />
-          </svg>
-        </div>
-        <div class="brush__body">
-          <h3 class="brush__name">Velo</h3>
-          <p class="brush__type">Pennello fondotinta</p>
-          <p>Densita media, forma piatta-ovale, presa stabile.</p>
-          <p class="prose__quote">Costruisce strati senza traccia.<br/>La pelle resta pelle &mdash; solo piu uniforme.</p>
-          <p><strong>Per quando:</strong> base, copertura modulabile, finitura naturale.</p>
-          <p class="note">[EXEMPLO - confirmar com cliente]</p>
-        </div>
-      </li>
-      <li class="brush reveal">
-        <div class="brush__num">03</div>
-        <div class="brush__visual" aria-hidden="true">
-          <svg viewBox="0 0 100 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-            <rect x="46" y="118" width="8" height="107" rx="1" fill="#1A1A1A" />
-            <rect x="44" y="100" width="12" height="20" fill="#A89070" />
-            <ellipse cx="50" cy="86" rx="18" ry="18" fill="#9C8462" />
-          </svg>
-        </div>
-        <div class="brush__body">
-          <h3 class="brush__name">Soffio</h3>
-          <p class="brush__type">Pennello ombretto</p>
-          <p>Setole corte, morbide, dense al centro per intensita controllata.</p>
-          <p class="prose__quote">Lavora nella piega come un&rsquo;eco.<br/>Sfuma senza disperdere.</p>
-          <p><strong>Per quando:</strong> ombretto, sfumature, transizioni di luce sull&rsquo;occhio.</p>
-          <p class="note">[EXEMPLO - confirmar com cliente]</p>
-        </div>
-      </li>
-      <li class="brush reveal">
-        <div class="brush__num">04</div>
-        <div class="brush__visual" aria-hidden="true">
-          <svg viewBox="0 0 100 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-            <rect x="46" y="92" width="8" height="133" rx="1" fill="#1A1A1A" />
-            <rect x="44" y="74" width="12" height="20" fill="#A89070" />
-            <path d="M30 74 Q50 12 70 74 A24 14 0 0 1 30 74 Z" fill="#C9B79C" />
-          </svg>
-        </div>
-        <div class="brush__body">
-          <h3 class="brush__name">Carezza</h3>
-          <p class="brush__type">Pennello blush</p>
-          <p>Setole lunghe, leggere, a cupola.</p>
-          <p class="prose__quote">Posa il colore con un gesto solo.<br/>Sfuma da se. Lascia un velo, non una linea.</p>
-          <p><strong>Per quando:</strong> blush, illuminante, contouring leggero.</p>
-          <p class="note">[EXEMPLO - confirmar com cliente]</p>
-        </div>
-      </li>
-    </ol>
-    <div class="divider" aria-hidden="true"></div>
-    <section class="closing reveal">
-      <h2 class="display display--center">Quattro pennelli.<br/>Quattro nomi.<br/>Quattro modi di trasformare il gesto in arte.</h2>
-      <p class="cta-line"><a href="#contatti" class="link">Contattaci per scoprire la collezione &rarr;</a></p>
-    </section>
-  </div>
-</section>
-<section class="page" id="contatti">
-  <div class="container">
-    <header class="page__head reveal">
-      <p class="eyebrow">Contatti</p>
-      <h2 class="display">Parliamone.</h2>
-      <p class="lede">Per ordini, collaborazioni, o semplicemente per condividere il tuo gesto. Siamo qui.</p>
-    </header>
-    <div class="divider" aria-hidden="true"></div>
+
+  <div class="block">
+    <div class="block-label">Formas de contato</div>
     <div class="contact-grid">
-      <aside class="contact-info reveal">
-        <div class="contact-block">
-          <p class="eyebrow">Telefono / WhatsApp</p>
-          <p class="contact-value"><a href="tel:+393887346075">+39 388 7346075</a></p>
-        </div>
-        <div class="contact-block">
-          <p class="eyebrow">Email</p>
-          <p class="contact-value contact-value--muted">[A CONFIRMAR]</p>
-        </div>
-        <div class="contact-block">
-          <p class="eyebrow">Instagram</p>
-          <p class="contact-value"><a href="https://instagram.com/yanadubina_brushes" target="_blank" rel="noopener">@yanadubina_brushes</a></p>
-          <p class="note">[A CONFIRMAR - confirmar handle ufficiale Le Piume com cliente]</p>
-        </div>
-      </aside>
-      <form class="form reveal" id="contact-form" novalidate>
-        <h3 class="form__title">Scrivici</h3>
-        <div class="field">
-          <label for="f-nome">Nome</label>
-          <input id="f-nome" name="nome" type="text" placeholder="Il tuo nome" required />
-          <span class="field__error" data-for="f-nome"></span>
-        </div>
-        <div class="field">
-          <label for="f-email">Email</label>
-          <input id="f-email" name="email" type="email" placeholder="La tua email" required />
-          <span class="field__error" data-for="f-email"></span>
-        </div>
-        <div class="field">
-          <label for="f-msg">Messaggio</label>
-          <textarea id="f-msg" name="messaggio" rows="5" placeholder="Raccontaci cosa cerchi." required></textarea>
-          <span class="field__error" data-for="f-msg"></span>
-        </div>
-        <button class="btn btn--primary" type="submit">Invia <span aria-hidden="true">&rarr;</span></button>
-        <div class="form__success" id="form-success" hidden>
-          <p class="success__title">Grazie.</p>
-          <p>Il tuo messaggio e arrivato. Ti risponderemo entro 24 ore lavorative.</p>
-          <p class="note">[A CONFIRMAR - prazo de resposta com cliente]</p>
-        </div>
-      </form>
+      <div class="contact-item"><div class="contact-label">Telefone / WhatsApp</div><div class="contact-val">+39 388 7346075</div></div>
+      <div class="contact-item"><div class="contact-label">Email</div><div class="contact-val"><span class="badge badge-warn">A CONFIRMAR</span> email de contato com cliente</div></div>
+      <div class="contact-item"><div class="contact-label">Instagram</div><div class="contact-val">@yanadubina_brushes <span class="badge badge-warn">A CONFIRMAR - handle oficial</span></div></div>
     </div>
-    <div class="divider" aria-hidden="true"></div>
-    <section class="closing reveal">
-      <p class="signature">Le Piume<br/><span class="signature__sub">strumenti per artisti del gesto</span></p>
-    </section>
+  </div>
+
+  <div class="block">
+    <div class="block-label lang-it">Modulo</div>
+    <div class="block-label lang-pt">Formulario</div>
+    <div class="lang-it">
+      <div class="kv"><span class="k">Titolo</span><span class="v">Scrivici</span></div>
+      <div class="kv"><span class="k">Campo 1 - Nome</span><span class="v"><strong>Label:</strong> Nome &middot; <strong>Placeholder:</strong> Il tuo nome</span></div>
+      <div class="kv"><span class="k">Campo 2 - Email</span><span class="v"><strong>Label:</strong> Email &middot; <strong>Placeholder:</strong> La tua email</span></div>
+      <div class="kv"><span class="k">Campo 3 - Messaggio</span><span class="v"><strong>Label:</strong> Messaggio &middot; <strong>Placeholder:</strong> Raccontaci cosa cerchi.</span></div>
+      <div class="kv"><span class="k">Bottone</span><span class="v"><span class="pill">Invia &rarr;</span></span></div>
+    </div>
+    <div class="lang-pt">
+      <div class="kv"><span class="k">Titulo</span><span class="v">Escreva pra gente</span></div>
+      <div class="kv"><span class="k">Campo 1 - Nome</span><span class="v"><strong>Label:</strong> Nome &middot; <strong>Placeholder:</strong> Seu nome</span></div>
+      <div class="kv"><span class="k">Campo 2 - Email</span><span class="v"><strong>Label:</strong> Email &middot; <strong>Placeholder:</strong> Seu email</span></div>
+      <div class="kv"><span class="k">Campo 3 - Mensagem</span><span class="v"><strong>Label:</strong> Mensagem &middot; <strong>Placeholder:</strong> Conte o que procura.</span></div>
+      <div class="kv"><span class="k">Botao</span><span class="v"><span class="pill">Enviar &rarr;</span></span></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Microcopy pos-envio</div>
+    <div class="lang-it">
+      <div class="kv"><span class="k">Titolo</span><span class="v">Grazie.</span></div>
+      <div class="kv"><span class="k">Testo</span><span class="v">Il tuo messaggio e arrivato. Ti risponderemo entro 24 ore lavorative. <span class="badge badge-warn">A CONFIRMAR</span></span></div>
+    </div>
+    <div class="lang-pt">
+      <div class="kv"><span class="k">Titulo</span><span class="v">Obrigado.</span></div>
+      <div class="kv"><span class="k">Texto</span><span class="v">Sua mensagem chegou. Respondemos em ate 24h uteis. <span class="badge badge-warn">A CONFIRMAR</span></span></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Fechamento (assinatura)</div>
+    <div class="prose lang-it"><p>Le Piume - strumenti per artisti del gesto.</p></div>
+    <div class="prose lang-pt"><p>Le Piume - instrumentos para artistas do gesto.</p></div>
   </div>
 </section>
+
+<section class="legend">
+  <h3>Legenda</h3>
+  <ul>
+    <li><span class="badge badge-warn">EXEMPLO</span> Conteudo placeholder - confirmar/ajustar com cliente.</li>
+    <li><span class="badge badge-warn">A CONFIRMAR</span> Dado pendente - necessario do cliente antes de publicar.</li>
+    <li><span class="badge badge-info">REVISAR ITALIANO</span> Trecho a validar com falante nativo antes da publicacao.</li>
+    <li><span class="pill">Pill</span> Representa um CTA - texto exato do botao. Layout visual sera produzido depois.</li>
+  </ul>
+  <p class="legend-note">Documento de leitura. Sem layout final, sem animacoes. A LP visual sera desenhada apos a aprovacao da copy.</p>
+</section>
+
 </main>
-<footer class="footer">
-  <div class="container footer__inner">
-    <p class="footer__brand">Le Piume</p>
-    <nav class="footer__menu" aria-label="Footer">
-      <a href="#inizio">Inizio</a>
-      <a href="#storia">Storia</a>
-      <a href="#pennelli">Pennelli</a>
-      <a href="#contatti">Contatti</a>
-    </nav>
-    <p class="footer__legal">&copy; <span id="year"></span> Le Piume. Tutti i diritti riservati.</p>
+
+<footer class="doc-footer">
+  <div class="container">
+    <span>Le Piume - Cliente 08</span>
+    <span>&middot;</span>
+    <span>Copy do site (revisao)</span>
+    <span>&middot;</span>
+    <span>2026-05-05</span>
   </div>
 </footer>
-<script src="script.js" defer></script>
+
+<script src="script.js"></script>
 </body>
 </html>
