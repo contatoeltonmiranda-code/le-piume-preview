@@ -40,6 +40,10 @@
     });
   }
 
+  function revealAll(){
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
   if('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
@@ -48,11 +52,24 @@
           io.unobserve(e.target);
         }
       });
-    },{ threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    },{ threshold: 0.05, rootMargin: '0px 0px 80px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el){
+      var rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight && rect.bottom > 0){
+        el.classList.add('is-visible');
+      } else {
+        io.observe(el);
+      }
+    });
   } else {
-    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
+    revealAll();
   }
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.is-visible)').forEach(function(el){
+      var rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight + 200) el.classList.add('is-visible');
+    });
+  }, 100);
 
   var form = document.getElementById('contact-form');
   if(form){
